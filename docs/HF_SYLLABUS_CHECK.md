@@ -1,37 +1,50 @@
 # Hugging Face curriculum map
 
-This file links the official course sources used by the ML track. Hugging Face courses evolve; verify the current unit list when beginning a track and record the exact units completed in your learning log. Do not copy course text into this repository.
+This map connects the local 16-week plan to selected units in the official Hugging Face courses. The official syllabus changes over time; re-check the linked table of contents when starting each unit. This repository links to course material and provides original exercises; it does not copy official lesson text or notebooks.
 
-## Tracks and sequencing
+## Week-by-week source-to-practice map
 
-| Track | Official source | Purpose in this programme | Planned weeks | Status |
-|---|---|---|---|---|
-| A | Local foundations: NumPy, PyTorch, tensors, gradients, training loops | Build enough numerical and deep-learning fluency to understand the model implementations. Use the local ML labs and official library docs as references. | 1–3 | Local track; curate exercises and record dependencies |
-| B | [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/en/chapter0/1) | Transformer foundations, using models, datasets/tokenizers, fine-tuning, and advanced LLM topics. Follow only chapters that serve the current gate and project. | 3–6 | Source linked; detailed chapter selection still to be recorded |
-| C | [Hugging Face smol-course](https://huggingface.co/learn/smol-course/unit0/1) | Post-training practice including supervised fine-tuning, evaluation, preference alignment, and related topics. | 7–8 | Source linked; check current unit availability and compute requirements |
-| D | [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) | Agent fundamentals, tools/actions/observations, frameworks, use cases, evaluation, and final project. | 9–10 | Source linked; choose a bounded subset aligned with the capstone |
-| E | [Hugging Face Context Course](https://huggingface.co/learn/context-course) | Context engineering and agent-assisted ML workflows. Treat this as optional enrichment unless it directly supports the capstone. | 10–11 | Source linked; confirm current course structure before scheduling |
-| F | [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course/en/unit0/introduction) | Reinforcement-learning foundations and practice. | Optional, only if ahead at Gate 3 | Intentionally optional; default to skip when interview or capstone gates are behind |
+| Local week | Official source and selected units | Local practice / evidence | Scope |
+|---|---|---|---|
+| 1 | Local foundations: NumPy arrays, vectors/matrices, gradients, regression | Implement regression on toy data; plot loss and explain the gradient update | Prerequisite work; not a Hugging Face course unit |
+| 2 | Local foundations: neural networks, backpropagation, PyTorch tensors/autograd | Two-layer network on a toy task; check gradients and explain train/eval mode | Prerequisite work; not a Hugging Face course unit |
+| 3 | [LLM Course, Chapter 1: Transformer models](https://huggingface.co/learn/llm-course/en/chapter1/1) — skim the concepts needed for tokenisation and attention | Training/validation/test split discipline; explain tokens, embeddings, attention, and leakage in your own words | Read for concepts; do not attempt to master every transformer detail in one week |
+| 4 | [LLM Course, Chapter 6: Tokenizers](https://huggingface.co/learn/llm-course/en/chapter6/1) plus relevant parts of Chapter 1 | `ml/labs/lab01_bpe_tokenizer`: BPE merges, vocabulary, encode/decode tests; write a short comparison with the official tokenizer tooling | Core implementation gate: BPE lab green |
+| 5 | [LLM Course, Chapter 1: Transformer models](https://huggingface.co/learn/llm-course/en/chapter1/1), [Chapter 2: Using Transformers](https://huggingface.co/learn/llm-course/en/chapter2/1), and [Chapter 5: Datasets](https://huggingface.co/learn/llm-course/en/chapter5/1) | `ml/labs/lab02_attention`: scaled dot-product attention; run a small Transformers pipeline and load/split a small dataset | Core implementation gate: attention lab green; no large-model training required |
+| 6 | [LLM Course, Chapter 3: Fine-tuning a pretrained model](https://huggingface.co/learn/llm-course/en/chapter3/1); consult [Chapter 4: Sharing models and tokenizers](https://huggingface.co/learn/llm-course/en/chapter4/1) only if publishing a model artifact | Fine-tune a small model only if compute and dataset size allow; fix held-out evaluation data before tuning and record the baseline, runtime, memory, and results | Use a small CPU-friendly or free hosted run; skip a costly run rather than incur charges |
+| 7 | [smol-course, Unit 1: Instruction Tuning](https://huggingface.co/learn/smol-course/unit1/1) and the course's current evaluation unit | Compare a small baseline with a tuned result where feasible; record dataset, prompt/chat template, metric, and limitations | Selected units, not a claim of full course completion |
+| 8 | Build a local evaluation harness. The [smol-course Model Evaluation unit](https://huggingface.co/learn/smol-course/unit4/1) was still marked “Coming Soon” when checked on 22 October 2026; revisit the official page before scheduling it | Create a repeatable evaluation harness and compare quality, latency, and cost; report failure examples | Do not block the week on an unreleased external unit; use the local evaluation plan |
+| 9 | [Agents Course, Unit 1: Introduction to Agents](https://huggingface.co/learn/agents-course/en/unit1/introduction) | Build a small tool-using agent with at least two deterministic tools; log tool calls, errors, and termination conditions | Core agent fundamentals; do not add tools without a clear need |
+| 10 | [Agents Course, Unit 2: Frameworks](https://huggingface.co/learn/agents-course/en/unit2/introduction) and [Agents Course official syllabus](https://huggingface.co/learn/agents-course/en/unit0/introduction) — select Unit 3, “Use Case for Agentic RAG,” from the current navigation | Compare a simple hand-written loop with one framework or retrieval workflow; document failure cases and why the abstraction helps | Choose one framework; do not learn three frameworks in parallel |
+| 11–13 | Revisit only source units needed for the capstone; use the official evaluation/agent observability material if applicable | User/problem validation, source inventory, fixed evaluation set, baseline, red-team tests, and failure report | The capstone's evidence and safety are the priority, not collecting more course completions |
+| 14–16 | Review relevant LLM fundamentals and selected course notes | Explain transformers, tokenisation, evaluation, data leakage, tool use, and limitations without notes; link explanations to capstone evidence | Revision and project delivery; no new course track by default |
 
-## How to map a unit before studying it
+### Optional material — defer by default
 
-For every selected chapter or unit, add a dated row to your study log containing:
+- [smol-course, Unit 2: Preference Alignment](https://huggingface.co/learn/smol-course/unit2/1): study only after instruction-tuning and evaluation fundamentals are understood.
+- [smol-course, Unit 3: Vision Language Models](https://huggingface.co/learn/smol-course/unit3/1): optional and not required by the current text-focused capstone.
+- [Agents Course](https://huggingface.co/learn/agents-course/en/unit0/introduction) bonus units: observability/evaluation is relevant when it helps the capstone; other bonus units are optional.
+- [Deep RL Course](https://huggingface.co/learn/deep-rl-course/en/unit0/introduction) and the [Context Course](https://huggingface.co/learn/context-course): enrichment only. Do not schedule these until the interview and capstone gates are on track and the official unit structure has been checked.
 
-1. The official chapter URL and title.
-2. The concepts required for the current roadmap gate.
-3. The local note, lab, experiment, or project change that demonstrates application.
-4. A verification step: quiz, test, evaluation metric, or a short explanation written from memory.
-5. The status: not started, in progress, completed, or deferred. Completed means the practice and verification were done, not merely that the page was opened.
+## Unit completion record
 
-## Rules for keeping the scope realistic
+For each unit actually studied, add a dated record to your learning log with:
+
+1. Official URL and unit title.
+2. Specific sections completed (not just the landing page).
+3. Local note, lab, experiment, or project change that applies the concepts.
+4. Verification: quiz, test, evaluation metric, or explanation written from memory.
+5. Status: not started, in progress, completed, or deferred. **Completed** means practice and verification were done.
+
+## Budget and environment rules
 
 - Python and DSA interview preparation remain protected priorities.
-- Do not schedule every Hugging Face course end-to-end simply because it is available. Select the units that support the current objective.
-- Use the LLM Course as the primary conceptual backbone; smol-course and Agents Course are applied branches, not replacements for fundamentals.
-- Record hardware, memory, network, and paid-compute requirements before running a notebook. Prefer small local experiments or free hosted options where feasible.
-- Link to official material rather than copying its text, notebooks, or answer keys.
-- Re-check links and unit names when starting a track because the source courses change over time.
+- Assume no dedicated GPU. Prefer small datasets, small models, CPU-friendly tasks, or a free hosted notebook when its terms and limits are suitable.
+- Never upload private or sensitive data to a hosted notebook or model service without authorisation and an explicit data-handling review.
+- Before fine-tuning, record estimated compute/time and the fallback if the run is too expensive or slow.
+- Never evaluate on training data. Fix the held-out test set before tuning and compare with a simple baseline.
+- Record the seed where relevant, model/dataset identifier and revision, configuration, metrics, date, and limitations.
 
-## Current verification state
+## Verification state
 
-The official landing pages above were checked while this file was updated. The full week-by-week chapter selection, local lab mapping, and compute budget are **not yet complete**. Do not claim the syllabus is fully mapped until those items have been filled and reviewed.
+The mapping above was checked against official Hugging Face course navigation on 22 October 2026. At that check, smol-course Unit 4 (Model Evaluation) was marked “Coming Soon,” so the plan does not depend on its release. Course contents can change; this is a **selected-unit plan**, not a claim that the learner has completed these units or that every course chapter is mapped. Re-check unit availability before starting each block and update the record if the official syllabus changes.
