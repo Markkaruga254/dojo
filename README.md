@@ -37,20 +37,20 @@ cd dojo
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install pytest ruff
+python -m pip install -e ".[dev]"
 ```
 
-On Windows, activate with `.venv\Scripts\activate`. The repository contains intentionally incomplete teaching labs. Optional lab dependencies may be needed; follow the selected module's instructions. The commands above install the tools for the core checks and do not claim to install every optional dependency.
+On Windows, activate with `.venv\\Scripts\\activate`. This installs the importable NSE platform package in editable mode and the tools used by the core checks. Install optional lab dependencies only when needed with `python -m pip install -e ".[labs]"`. The repository contains intentionally incomplete teaching labs; installing dependencies does not mean every lab is complete or expected to pass.
 
 ### 2. Verify the core workflow
 
 ```bash
 python -m ruff check scripts tests dsa/solutions
 python -m pytest -q
-PYTHONPATH=nse_platform/src python -m pytest -q nse_platform/tests
+python -m pytest -q nse_platform/tests
 ```
 
-The final command sets the source path for the NSE tests. If a command fails, inspect the error and the relevant module instructions instead of skipping it.
+The editable install makes the NSE package importable for the platform tests. If a command fails, inspect the error and the relevant module instructions instead of skipping it.
 
 ### 3. Start learning
 
