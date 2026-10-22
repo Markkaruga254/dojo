@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "forge-90"
 version = "0.1.0"
@@ -15,3 +19,12 @@ testpaths = ["tests", "dsa/solutions"]
 [tool.ruff]
 line-length = 100
 extend-exclude = ["python/labs", "ml/labs"]  # starter code intentionally incomplete
+
+# Only the importable NSE platform package is installed. Course tracks and
+# intentionally incomplete labs are learning content, not Python packages.
+[tool.setuptools]
+package-dir = {"" = "nse_platform/src"}
+
+[tool.setuptools.packages.find]
+where = ["nse_platform/src"]
+include = ["nse_insights*"]
