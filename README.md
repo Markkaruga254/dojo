@@ -40,7 +40,7 @@ python -m pip install --upgrade pip
 python -m pip install pytest ruff
 ```
 
-On Windows, activate with `.venv\\Scripts\\activate`. The repository contains intentionally incomplete teaching labs. Optional lab dependencies may be needed; follow the selected module's instructions. The commands above install the tools for the core checks and do not claim to install every optional dependency.
+On Windows, activate with `.venv\Scripts\activate`. The repository contains intentionally incomplete teaching labs. Optional lab dependencies may be needed; follow the selected module's instructions. The commands above install the tools for the core checks and do not claim to install every optional dependency.
 
 ### 2. Verify the core workflow
 
@@ -69,7 +69,7 @@ The final command sets the source path for the NSE tests. If a command fails, in
 | Machine learning | [ml/](ml/) | Hugging Face study path plus tokenization and attention labs |
 | NSE market-insights platform | [nse_platform/](nse_platform/) | Incremental product work, ingestion, evaluation, project evidence |
 | Cloud and DevOps | [cloud/](cloud/) | Cloud engineering, delivery, infrastructure, security |
-| Assessments | [assessments/](assessments/) | Interview banks, mock schedules, rubrics |
+| Assessments | [assessments/](assessments/) | Interview banks, mock schedules, rubrics, timed practice playbook |
 | Daily learning record | [log/](log/) | Daily notes, effort, outcomes, review |
 
 ### Learning loop
@@ -102,6 +102,8 @@ See [the daily protocol](docs/DAILY_PROTOCOL.md). The tracker commands are `make
 ## Prove progress
 
 - Use the gates and mock rubrics in [ROADMAP.md](ROADMAP.md) and [assessments/](assessments/).
+- Follow the [practical assessment playbook](assessments/PRACTICAL-ASSESSMENT-PLAYBOOK.md) before timed practice.
+- Use the [capstone rubric](assessments/CAPSTONE-RUBRIC.md) to score a project using evidence and explicit critical-fail rules.
 - Record attempts, outcomes, time taken, and whether hints were needed.
 - Write a retrospective after each mock: what failed, why, and what changes next.
 - Keep project evidence: tests, evaluation sets, architecture decisions, and a concise limitations write-up.
@@ -118,7 +120,7 @@ A green test suite only proves the tests that ran. It does not mean every course
 - The NSE project is educational, not investment advice or a promise of accurate forecasts. Respect data-provider terms and document freshness, provenance, and model limitations.
 - Cloud labs can incur charges. Check pricing, clean up resources, and never commit credentials or state files.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/COURSE_AUDIT.md](docs/COURSE_AUDIT.md) for contribution standards and known improvement areas.
+See [CONTRIBUTING.md](CONTRIBUTING.md), [the lesson template](docs/LESSON_TEMPLATE.md), and [the course audit](docs/COURSE_AUDIT.md) for contribution standards and improvement areas.
 
 ## Licensing
 
