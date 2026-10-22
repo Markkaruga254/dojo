@@ -13,6 +13,10 @@ This track combines foundations, official Hugging Face learning material, from-s
 
 The source courses evolve. Keep chapter selection and completion status in [the syllabus map](../docs/HF_SYLLABUS_CHECK.md); do not mark a track complete just because you opened its landing page.
 
+## Free supporting resources
+
+Use the [free-first resource guide](../docs/RESOURCE_GUIDE.md#machine-learning-and-hugging-face) alongside the [week-by-week source map](../docs/HF_SYLLABUS_CHECK.md). It prioritises the official Hugging Face course for the exact unit in your current week, with NumPy/PyTorch for prerequisites and optional free explanations when needed. Do not add an extra course unless it resolves a specific blocker.
+
 ## How to study a unit
 
 **Read the official lesson → explain it from memory → implement a small mechanism or run a controlled experiment → test/evaluate → record the result and limitation.** Use AI to review reasoning and explain errors, not to conceal gaps by copying a complete solution.
