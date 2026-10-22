@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
 """Check repository-relative Markdown links and heading anchors."""
 from __future__ import annotations
+
 import re
 import sys
 from pathlib import Path
@@ -26,7 +26,7 @@ def anchors(path: Path) -> set[str]:
         text = path.read_text(encoding="utf-8")
     except (OSError, UnicodeDecodeError):
         return set()
-    found = set(re.findall(r'\bid=["\']([^"\']+)["\']', text, re.I))
+    found = set(re.findall(r'\bid=["\']([^"\']+)["\']', text, re.IGNORECASE))
     counts: dict[str, int] = {}
     for heading in HEADING_RE.findall(text):
         base = slug(heading)
