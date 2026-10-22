@@ -14,7 +14,7 @@ def test_accepts_existing_relative_target_and_heading(tmp_path: Path) -> None:
     docs = tmp_path / "docs"
     docs.mkdir()
     (docs / "guide.md").write_text("# Getting Started\n\nBody.\n", encoding="utf-8")
-    (tmp_path / "README.md").write_text("[guide](docs/guide.md#Getting-Started)\n", encoding="utf-8")
+    (tmp_path / "README.md").write_text("[guide](docs/guide.md#getting-started)\n", encoding="utf-8")
     assert check_links(tmp_path) == []
 
 
