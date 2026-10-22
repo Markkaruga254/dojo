@@ -1,12 +1,16 @@
-# Dojo
-
 <div align="center">
+
+# Dojo
 
 **One repository. Deliberate practice. Evidence you can show.**
 
 A 16-week, practice-first engineering programme combining Python and DSA interview preparation, Hugging Face-centred machine-learning study, an NSE market-insights project, and cloud/DevOps foundations.
 
-[Start here](#start-here) · [Curriculum](#curriculum) · [Roadmap](ROADMAP.md) · [Daily protocol](docs/DAILY_PROTOCOL.md) · [Assessments](assessments/) · [Confidence matrix](CONFIDENCE-MATRIX.md)
+![Practice first](https://img.shields.io/badge/approach-practice--first-2563eb)
+![Tracks](https://img.shields.io/badge/tracks-5-0f766e)
+[![CI](https://github.com/Markkaruga254/dojo/actions/workflows/ci.yml/badge.svg)](https://github.com/Markkaruga254/dojo/actions/workflows/ci.yml)
+
+[🚀 Start here](#start-here) · [🧭 Course map](#course-map) · [📚 Curriculum](#curriculum) · [🗺️ Roadmap](ROADMAP.md) · [🧪 Assessments](assessments/) · [📈 Evidence tracker](CONFIDENCE-MATRIX.md)
 
 </div>
 
@@ -55,6 +59,42 @@ The editable install makes the NSE package importable for the platform tests. If
 3. Review [docs/TOOLS_SETUP.md](docs/TOOLS_SETUP.md) and [docs/HF_SYLLABUS_CHECK.md](docs/HF_SYLLABUS_CHECK.md).
 4. Run make day to create today's log and make week to see the current focus.
 5. Start with the first unfinished module in your scheduled track.
+
+## Course map
+
+The programme is organised around a repeating loop: learn a concept, build something small, test it, explain it, and keep evidence. The tracks reinforce one another rather than acting as five unrelated courses.
+
+```mermaid
+flowchart TD
+    A[Start here: baseline + setup] --> B[Weekly goal + source material]
+    B --> C{Choose your practice track}
+    C --> D[DSA + interview practice]
+    C --> E[Applied Python labs]
+    C --> F[Hugging Face + ML labs]
+    C --> G[Cloud + DevOps labs]
+    E --> H[NSE market-insights project]
+    F --> H
+    G --> H
+    D --> I[Timed assessment + retrospective]
+    H --> I
+    I --> J{Can you explain and repeat it independently?}
+    J -- Not yet --> K[Review the gap + retry]
+    K --> C
+    J -- Yes --> L[Record evidence + schedule spaced review]
+    L --> B
+```
+
+### Jump into a track
+
+| Open this | Start with | What to produce |
+|---|---|---|
+| 🧩 [DSA and interview practice](dsa/) | [DSA checkpoints](dsa/CHECKPOINTS.md) | Independent attempts, complexity explanations, and spaced re-solves |
+| 🐍 [Applied Python](python/) | [Python checkpoints](python/CHECKPOINTS.md) | Small tested scripts, APIs, and data tasks |
+| 🤗 [Machine learning](ml/) | [Hugging Face syllabus map](docs/HF_SYLLABUS_CHECK.md) | Concept notes, implementations, experiments, and honest limitations |
+| ☁️ [Cloud and DevOps](cloud/) | [Cloud lab sequence](cloud/README.md#lab-sequence) | Linux/Git, container, CI, and Terraform evidence before cloud spend |
+| 📊 [NSE project](nse_platform/) | [Project README](nse_platform/README.md) | Tested product increments, data provenance, evaluation, and project notes |
+| 🎯 [Assessments](assessments/) | [Practical assessment playbook](assessments/PRACTICAL-ASSESSMENT-PLAYBOOK.md) | Timed attempts, scores, failure analysis, and next actions |
+| 🗓️ [Daily learning log](log/) | [Daily protocol](docs/DAILY_PROTOCOL.md) | A short record of effort, results, blockers, and tomorrow's priorities |
 
 ## Curriculum
 
