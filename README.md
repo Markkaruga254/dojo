@@ -10,7 +10,7 @@ A 16-week, practice-first engineering programme combining Python and DSA intervi
 ![Tracks](https://img.shields.io/badge/tracks-5-0f766e)
 [![CI](https://github.com/Markkaruga254/dojo/actions/workflows/ci.yml/badge.svg)](https://github.com/Markkaruga254/dojo/actions/workflows/ci.yml)
 
-[🚀 Start here](#start-here) · [🧭 Course map](#course-map) · [📚 Curriculum](#curriculum) · [🆓 Free-first resources](docs/RESOURCE_GUIDE.md) · [🗺️ Roadmap](ROADMAP.md) · [🧪 Assessments](assessments/) · [📈 Evidence tracker](CONFIDENCE-MATRIX.md)
+[Start here](#start-here) · [Course map](#course-map) · [Curriculum](#curriculum) · [Free-first resources](docs/RESOURCE_GUIDE.md) · [Roadmap](ROADMAP.md) · [Assessments](assessments/) · [Evidence tracker](CONFIDENCE-MATRIX.md)
 
 </div>
 
@@ -90,13 +90,13 @@ Need an explanation, reference, or extra practice for the task you are on? Use t
 
 | Open this | Start with | What to produce |
 |---|---|---|
-| 🧩 [DSA and interview practice](dsa/) | [DSA checkpoints](dsa/CHECKPOINTS.md) | Independent attempts, complexity explanations, and spaced re-solves |
-| 🐍 [Applied Python](python/) | [Python checkpoints](python/CHECKPOINTS.md) | Small tested scripts, APIs, and data tasks |
-| 🤗 [Machine learning](ml/) | [Hugging Face syllabus map](docs/HF_SYLLABUS_CHECK.md) | Concept notes, implementations, experiments, and honest limitations |
-| ☁️ [Cloud and DevOps](cloud/) | [Cloud lab sequence](cloud/README.md#lab-sequence) | Linux/Git, container, CI, and Terraform evidence before cloud spend |
-| 📊 [NSE project](nse_platform/) | [Project README](nse_platform/README.md) | Tested product increments, data provenance, evaluation, and project notes |
-| 🎯 [Assessments](assessments/) | [Practical assessment playbook](assessments/PRACTICAL-ASSESSMENT-PLAYBOOK.md) | Timed attempts, scores, failure analysis, and next actions |
-| 🗓️ [Daily learning log](log/) | [Daily protocol](docs/DAILY_PROTOCOL.md) | A short record of effort, results, blockers, and tomorrow's priorities |
+|  [DSA and interview practice](dsa/) | [DSA checkpoints](dsa/CHECKPOINTS.md) | Independent attempts, complexity explanations, and spaced re-solves |
+|  [Applied Python](python/) | [Python checkpoints](python/CHECKPOINTS.md) | Small tested scripts, APIs, and data tasks |
+|  [Machine learning](ml/) | [Hugging Face syllabus map](docs/HF_SYLLABUS_CHECK.md) | Concept notes, implementations, experiments, and honest limitations |
+|  [Cloud and DevOps](cloud/) | [Cloud lab sequence](cloud/README.md#lab-sequence) | Linux/Git, container, CI, and Terraform evidence before cloud spend |
+|  [NSE project](nse_platform/) | [Project README](nse_platform/README.md) | Tested product increments, data provenance, evaluation, and project notes |
+|  [Assessments](assessments/) | [Practical assessment playbook](assessments/PRACTICAL-ASSESSMENT-PLAYBOOK.md) | Timed attempts, scores, failure analysis, and next actions |
+|  [Daily learning log](log/) | [Daily protocol](docs/DAILY_PROTOCOL.md) | A short record of effort, results, blockers, and tomorrow's priorities |
 
 ## Curriculum
 
