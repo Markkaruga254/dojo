@@ -20,6 +20,13 @@ The depth targets are **deploy, automate, secure, observe**. Build a small servi
 | 15 | Interview review | Answer cloud/DevOps questions aloud |
 | 16 | Taper | No new tools; review evidence and weak spots |
 
+## Start here
+
+1. Complete [Lab 01: Linux CLI and Git workflow](labs/lab01_linux_git/README.md). It is local-only and does not require cloud credentials or paid services.
+2. Read [Cloud checkpoints](CHECKPOINTS.md) before provisioning or publishing a service.
+3. Use [security-overlay.md](security-overlay.md) as a review checklist, not as a substitute for testing.
+4. Use [teaching-plan.md](teaching-plan.md) when preparing a reproducible group session.
+
 ## Files and workflow
 
 - security-overlay.md: cross-project security checklist.
@@ -27,5 +34,3 @@ The depth targets are **deploy, automate, secure, observe**. Build a small servi
 - Use your Docker mastery repository as the deeper reference; link to it rather than duplicating the same course.
 
 Cloud services can cost money even when an exercise fails. Check current pricing, set budget alerts where available, use least privilege, and document teardown before creating resources. A local demonstration is acceptable when cloud access or budget is unavailable; mark hosted deployment as deferred rather than claiming it was deployed.
-
-Start with [Cloud checkpoints](CHECKPOINTS.md) before provisioning or publishing a service.
