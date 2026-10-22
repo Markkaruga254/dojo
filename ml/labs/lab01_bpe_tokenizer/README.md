@@ -24,7 +24,7 @@ Install the optional lab dependencies if needed, then run from this directory:
 python -m pytest -q
 ```
 
-Before relying on the supplied tests, add checks for at least two of these: empty input, zero merges, repeated pairs, tied pair frequencies, overlapping-looking occurrences, and round-trip `decode(encode(text, merges), ...)` behavior using the merges trained for that text.
+Before relying on the supplied tests, add checks for at least two of these: empty input, zero merges, repeated pairs, tied pair frequencies, overlapping-looking occurrences, and round-trip `decode(encode(text, merges)) == text` behavior for the text used to train the merges.
 
 ## Explain and record
 
