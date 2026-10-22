@@ -5,11 +5,11 @@ This track combines foundations, official Hugging Face learning material, from-s
 ## Learning sequence
 
 1. **A — Foundations:** NumPy, tensors, gradients, regression, neural networks, and training loops. These are local exercises, not a separate Hugging Face course.
-2. **B — LLM foundations:** use the [official Hugging Face LLM Course](https://huggingface.co/learn/llm-course/en/chapter0/1) as the main conceptual backbone. Select chapters based on `CURRICULUM.md`.
-3. **C — Post-training:** use the [Hugging Face smol-course](https://huggingface.co/learn/smol-course/unit0/1) for selected fine-tuning and evaluation work. Check the current unit list and hardware requirements before scheduling.
-4. **D — Agents:** use the [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) for tool use, agent workflows, and evaluation.
-5. **E — Context engineering:** the [Hugging Face Context Course](https://huggingface.co/learn/context-course) is an optional extension when it directly supports the capstone.
-6. **F — Deep reinforcement learning:** the [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course/en/unit0/introduction) is optional. Skip it if interview preparation or capstone gates are behind.
+2. **B — LLM foundations:** use the [official Hugging Face LLM Course](https://huggingface.co/learn/llm-course/en/chapter0/1) as the main conceptual backbone. Follow the selected chapter plan in the syllabus map.
+3. **C — Post-training:** use the [Hugging Face smol-course](https://huggingface.co/learn/smol-course/unit0/1) for selected instruction-tuning and evaluation work. Check the current unit list and hardware requirements before scheduling.
+4. **D — Agents:** use the [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/en/unit0/introduction) for tool use, agent workflows, and evaluation.
+5. **E — Context engineering:** the Context Course is optional enrichment when it directly supports the capstone and the official unit structure has been checked.
+6. **F — Deep reinforcement learning:** the Deep RL Course is optional. Skip it if interview preparation or capstone gates are behind.
 
 The source courses evolve. Keep chapter selection and completion status in [the syllabus map](../docs/HF_SYLLABUS_CHECK.md); do not mark a track complete just because you opened its landing page.
 
@@ -26,8 +26,11 @@ The source courses evolve. Keep chapter selection and completion status in [the 
 
 ## Track contents
 
-- `CURRICULUM.md` — weekly learning plan and gates.
-- `labs/` — from-scratch implementation labs, including BPE tokenization and attention.
-- `capstone/` — project brief, evaluation plan, and risk register.
+- CURRICULUM.md — weekly learning plan and gates.
+- CHECKPOINTS.md — evidence required for foundations, implementation labs, evaluation, and the capstone.
+- labs/ — from-scratch implementation labs, including BPE tokenization and attention.
+- capstone/ — project brief, evaluation plan, and risk register.
 
 Some starter functions are intentionally incomplete. That is part of the exercise, not a defect to hide. Follow each lab's instructions and verify your implementation with the provided and additional tests.
+
+Start with [ML checkpoints](CHECKPOINTS.md), then follow [the selected Hugging Face unit map](../docs/HF_SYLLABUS_CHECK.md).
