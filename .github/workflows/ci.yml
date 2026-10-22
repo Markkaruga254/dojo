@@ -26,6 +26,9 @@ jobs:
       - name: Lint completed Python modules
         run: python -m ruff check scripts tests dsa/solutions
 
+      - name: Check Markdown links
+        run: python scripts/check_markdown_links.py
+
       - name: Run core tests
         run: python -m pytest -q
 
