@@ -1,53 +1,125 @@
-# Forge-90
+# Dojo
 
-**One repo. One daily system. 16 weeks (26 Oct 2026 → 14 Feb 2027) to become interview-ready
-as a software / ML / DevOps engineer while shipping a real product.**
+<div align="center">
 
-> Working name. Before you push, check `github.com/<you>/forge-90` is free (or rename the folder).
+**One repository. Deliberate practice. Evidence you can show.**
 
-## What this replaces
-Three separate learning threads are merged here: the 90-day ML capstone, the Python/DevOps/cloud
-coursebook, and daily Python + DSA interview prep. The NSE investor-insights platform is the
-applied project that the Python and ML tracks feed.
+A 16-week, practice-first engineering programme combining Python and DSA interview preparation, Hugging Face-centred machine-learning study, an NSE market-insights project, and cloud/DevOps foundations.
 
-## The five tracks
-| Track | Folder | What it builds |
-|---|---|---|
-| DSA | `dsa/` | LeetCode-style fluency from zero: patterns, curated ~150 problems, spaced re-solves |
-| Applied Python | `python/` | Python for ML, backend, DevOps and cloud, with test-backed labs |
-| ML | `ml/` | Hugging Face tracks A–F, from-scratch labs, legal-access capstone |
-| Platform | `nse_platform/` | NSE news/price aggregator → sentiment & daily briefs → commercial product |
-| Cloud/DevOps | `cloud/` | Containers, CI/CD, Terraform, security overlay, Cloud Track teaching plan |
+[Start here](#start-here) · [Curriculum](#curriculum) · [Roadmap](ROADMAP.md) · [Daily protocol](docs/DAILY_PROTOCOL.md) · [Assessments](assessments/) · [Confidence matrix](CONFIDENCE-MATRIX.md)
 
-Plus `assessments/` (mock tests, rubrics, interview banks) and `log/` (your daily record, the centre of the system).
+</div>
 
-## Start in 15 minutes
+---
+
+Dojo is a learning system, not a promise that a fixed number of weeks makes someone job-ready. Build skills by attempting problems, implementing concepts, testing your work, recording what you learned, and collecting evidence of progress.
+
+The current plan runs **26 October 2026 – 14 February 2027**. It is ambitious; adjust the daily workload to your circumstances, protect rest, and use the objective gates in [ROADMAP.md](ROADMAP.md) rather than rushing because a calendar says so.
+
+## What you will practise
+
+- **Problem solving:** DSA patterns, independent attempts, spaced re-solves, and timed practice.
+- **Applied Python:** readable, tested Python for scripting, APIs, data work, and interviews.
+- **Machine learning:** official Hugging Face material as the conceptual backbone, reinforced with small from-scratch implementations and experiments.
+- **A real project:** an NSE market-insights platform, with attention to data quality, evaluation, sources, and limitations.
+- **Cloud and delivery:** Linux, networking, containers, CI/CD, infrastructure as code, IAM, observability, and security.
+- **Assessment practice:** timed mocks, written retrospectives, and evidence-based readiness gates.
+
+## Start here
+
+### 1. Prepare your environment
+
+You need Python 3.10 or newer, Git, and a terminal. CI uses Python 3.12.
+
 ```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev,labs]"
-make test          # forge CLI tests should pass
-make day           # creates today's log from the template
-make week          # shows this week's focus
+git clone https://github.com/Markkaruga254/dojo.git
+cd dojo
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install pytest ruff
 ```
 
-## Daily loop
-1. `make day` → open today's log.
-2. Run the blocks in `docs/DAILY_PROTOCOL.md` (DSA → Python → ML → Platform → log).
-3. Record every DSA attempt: `python scripts/forge.py problem "Two Sum" --topic arrays --difficulty easy --mode independent --minutes 18 --result solved`
-4. Shut down with the log review. Plan tomorrow's top 3.
-5. `make stats` every Sunday.
+On Windows, activate with `.venv\\Scripts\\activate`. The repository contains intentionally incomplete teaching labs. Optional lab dependencies may be needed; follow the selected module's instructions. The commands above install the tools for the core checks and do not claim to install every optional dependency.
 
-## Non-negotiables
-- **Independent / hinted / assisted** is logged honestly. It is the only metric that matters.
-- Attempt before AI. AI clarifies and reviews your work; it does not hide gaps.
-- Gates are objective (`ROADMAP.md`). You do not move on by feeling.
-- One lighter block per week and one real rest day. Burnout is the main risk to this plan.
+### 2. Verify the core workflow
 
-## Map
-`ROADMAP.md` · `docs/PRINCIPLES.md` · `docs/DAILY_PROTOCOL.md` · `docs/ASSESSMENT_STRATEGY.md` ·
-`docs/HF_SYLLABUS_CHECK.md` · `docs/TOOLS_SETUP.md` · `config/plan.json` (single source of truth for weekly focus)
+```bash
+python -m ruff check scripts tests dsa/solutions
+python -m pytest -q
+PYTHONPATH=nse_platform/src python -m pytest -q nse_platform/tests
+```
 
-## Verified vs not verified (when this repo was generated)
-- Tests run and passing against reference solutions: forge CLI, DSA pattern snippets, Python labs 01/02/04, ML labs 01/02, platform seed module.
-- **Not executed at generation time** (no network): `python/labs/lab03_notes_api` (needs FastAPI), `ruff`, the GitHub Actions workflow. Run `make test` and push once to confirm CI.
-- Hugging Face chapter mapping is intentionally blank: fill it in Week 1.
+The final command sets the source path for the NSE tests. If a command fails, inspect the error and the relevant module instructions instead of skipping it.
+
+### 3. Start learning
+
+1. Read [ROADMAP.md](ROADMAP.md) and record your baseline.
+2. Read [docs/PRINCIPLES.md](docs/PRINCIPLES.md) and [docs/DAILY_PROTOCOL.md](docs/DAILY_PROTOCOL.md).
+3. Review [docs/TOOLS_SETUP.md](docs/TOOLS_SETUP.md) and [docs/HF_SYLLABUS_CHECK.md](docs/HF_SYLLABUS_CHECK.md).
+4. Run `make day` to create today's log and `make week` to see the current focus.
+5. Start with the first unfinished module in your scheduled track.
+
+## Curriculum
+
+| Track | Location | Practice and evidence |
+|---|---|---|
+| DSA and interview problem solving | [dsa/](dsa/) | Patterns, attempts, reference solutions, spaced re-solves |
+| Applied Python | [python/](python/) | Test-backed practical Python labs |
+| Machine learning | [ml/](ml/) | Hugging Face study path plus tokenization and attention labs |
+| NSE market-insights platform | [nse_platform/](nse_platform/) | Incremental product work, ingestion, evaluation, project evidence |
+| Cloud and DevOps | [cloud/](cloud/) | Cloud engineering, delivery, infrastructure, security |
+| Assessments | [assessments/](assessments/) | Interview banks, mock schedules, rubrics |
+| Daily learning record | [log/](log/) | Daily notes, effort, outcomes, review |
+
+### Learning loop
+
+```mermaid
+flowchart TD
+    A[Read weekly goal] --> B[Study source lesson]
+    B --> C[Attempt without copying]
+    C --> D[Run tests or check result]
+    D --> E[Explain in your own words]
+    E --> F[Log evidence and gaps]
+    F --> G{Can you do it independently?}
+    G -- Not yet --> H[Review, get a hint, retry]
+    H --> C
+    G -- Yes --> I[Schedule a spaced re-solve]
+```
+
+For ML, use **Hugging Face material → concept notes → small implementation → experiment/tests → reflection**. The chapter-to-lab map is still being checked in [docs/HF_SYLLABUS_CHECK.md](docs/HF_SYLLABUS_CHECK.md); do not treat an unmapped chapter as completed.
+
+## Daily system
+
+1. **Attempt first.** Give the task a genuine independent attempt before using AI or reading a solution.
+2. **Track honestly.** Record whether the result was independent, hinted, or assisted. Assisted completion is not independent mastery.
+3. **Test and explain.** Capture the command, result, a small failure case, and an explanation.
+4. **Review gaps.** Put missed DSA problems and unclear concepts into a retry queue.
+5. **Close the day.** Complete the log, choose tomorrow's three priorities, and stop at the planned time.
+
+See [the daily protocol](docs/DAILY_PROTOCOL.md). The tracker commands are `make day`, `make week`, and `make stats`.
+
+## Prove progress
+
+- Use the gates and mock rubrics in [ROADMAP.md](ROADMAP.md) and [assessments/](assessments/).
+- Record attempts, outcomes, time taken, and whether hints were needed.
+- Write a retrospective after each mock: what failed, why, and what changes next.
+- Keep project evidence: tests, evaluation sets, architecture decisions, and a concise limitations write-up.
+- Update the [confidence matrix](CONFIDENCE-MATRIX.md) with links to evidence, not confidence alone.
+
+A green test suite only proves the tests that ran. It does not mean every course exercise is complete or guarantee interview readiness.
+
+## Quality and known limitations
+
+- CI checks completed Python modules and the core/NSE test suites. It does not treat unfinished ML starter exercises as completed implementations.
+- Tokenizer and attention labs contain learning TODOs; completing them is part of the curriculum.
+- The Hugging Face chapter map needs to be maintained against official source material.
+- Optional labs may require extra dependencies. Install only what the selected lab documents.
+- The NSE project is educational, not investment advice or a promise of accurate forecasts. Respect data-provider terms and document freshness, provenance, and model limitations.
+- Cloud labs can incur charges. Check pricing, clean up resources, and never commit credentials or state files.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/COURSE_AUDIT.md](docs/COURSE_AUDIT.md) for contribution standards and known improvement areas.
+
+## Licensing
+
+Check the repository's license files before reusing material. Third-party courses and external resources remain governed by their own terms; attribution does not imply affiliation or endorsement.

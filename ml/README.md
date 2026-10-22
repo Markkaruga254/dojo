@@ -1,11 +1,33 @@
-# ML track
+# Machine-learning track
 
-Backbone: Hugging Face courses (tracks A–F) plus from-scratch labs, culminating in a capstone. Official lessons are linked, not copied. Verify the real syllabi first: `docs/HF_SYLLABUS_CHECK.md`.
+This track combines foundations, official Hugging Face learning material, from-scratch implementation labs, and a capstone. The goal is not to finish every available course; it is to understand mechanisms, apply selected material, and produce verifiable project evidence.
 
-Constraints built in: student budget, no GPU assumed (Colab/Kaggle free tiers), free/open-source tools, no paid service as a prerequisite.
+## Learning sequence
 
-Teaching style: concept → implement the core mechanism yourself → use the library → evaluate honestly. AI reviews your work; it does not hide gaps.
+1. **A — Foundations:** NumPy, tensors, gradients, regression, neural networks, and training loops. These are local exercises, not a separate Hugging Face course.
+2. **B — LLM foundations:** use the [official Hugging Face LLM Course](https://huggingface.co/learn/llm-course/en/chapter0/1) as the main conceptual backbone. Select chapters based on `CURRICULUM.md`.
+3. **C — Post-training:** use the [Hugging Face smol-course](https://huggingface.co/learn/smol-course/unit0/1) for selected fine-tuning and evaluation work. Check the current unit list and hardware requirements before scheduling.
+4. **D — Agents:** use the [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) for tool use, agent workflows, and evaluation.
+5. **E — Context engineering:** the [Hugging Face Context Course](https://huggingface.co/learn/context-course) is an optional extension when it directly supports the capstone.
+6. **F — Deep reinforcement learning:** the [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course/en/unit0/introduction) is optional. Skip it if interview preparation or capstone gates are behind.
 
-- `CURRICULUM.md`: weekly plan and completion gates
-- `labs/`: from-scratch labs with tests (BPE tokenizer, attention)
-- `capstone/`: brief, evaluation plan, risk register
+The source courses evolve. Keep chapter selection and completion status in [the syllabus map](../docs/HF_SYLLABUS_CHECK.md); do not mark a track complete just because you opened its landing page.
+
+## How to study a unit
+
+**Read the official lesson → explain it from memory → implement a small mechanism or run a controlled experiment → test/evaluate → record the result and limitation.** Use AI to review reasoning and explain errors, not to conceal gaps by copying a complete solution.
+
+## Constraints
+
+- Assume no dedicated GPU. Prefer small experiments, CPU-friendly exercises, and free hosted notebooks where available.
+- Check compute limits, privacy, and service terms before uploading data or using hosted notebooks.
+- Never evaluate on training data. Keep a fixed test set and report a simple baseline beside model results.
+- Record configuration, seed where relevant, metrics, date, and known limitations.
+
+## Track contents
+
+- `CURRICULUM.md` — weekly learning plan and gates.
+- `labs/` — from-scratch implementation labs, including BPE tokenization and attention.
+- `capstone/` — project brief, evaluation plan, and risk register.
+
+Some starter functions are intentionally incomplete. That is part of the exercise, not a defect to hide. Follow each lab's instructions and verify your implementation with the provided and additional tests.
