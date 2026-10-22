@@ -8,7 +8,7 @@ Build a reusable retry decorator that retries only selected exceptions and can b
 
 Implement `retry` in `retry.py` with:
 
-- exponential backoff and a configurable retry limit;
+- exponential backoff and a configurable attempt limit (`times` is the total number of attempts, including the first call);
 - a configurable tuple of retryable exception types;
 - injectable `sleep` so tests can capture delays without sleeping;
 - `functools.wraps` so the wrapped function keeps its metadata;
@@ -28,7 +28,7 @@ Add tests for a function that succeeds after a transient failure, a non-retryabl
 
 ## Explain and record
 
-- Whether the configured retry count means retries or total attempts, based on the starter contract.
+- Why `times=3` means three total attempts, not one initial call plus three retries.
 - Why only selected exceptions should be retried.
 - How exponential backoff helps and when jitter is useful.
 - The test command, result, and one edge case you added.
