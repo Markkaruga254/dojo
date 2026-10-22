@@ -17,6 +17,10 @@ cd python/labs/lab01_log_analyzer
 python -m pytest -q
 ```
 
+## Free supporting resources
+
+Use the [free-first resource guide](../docs/RESOURCE_GUIDE.md#applied-python) for the official Python tutorial, free structured lessons, pytest documentation, and optional exercises. Choose the resource that addresses the current lab blocker, then return to the lab and add an edge-case test.
+
 ## Working rules
 
 1. Read the brief and docstrings before editing.

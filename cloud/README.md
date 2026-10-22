@@ -13,6 +13,10 @@ The depth targets are **deploy, automate, secure, observe**. Build a small servi
 
 Complete the local labs before provisioning cloud resources. Each lab requires evidence of what actually ran; reading the instructions is not completion.
 
+## Free supporting resources
+
+Use the [free-first resource guide](../docs/RESOURCE_GUIDE.md#cloud-and-devops) to pair each local lab with official Linux/Git, Docker, GitHub Actions, and Terraform material. Read only what you need for the current lab, then produce the evidence listed here. Local labs come before any billable cloud work.
+
 ## Suggested 16-week progression
 
 | Week | Topic | Hands-on evidence |

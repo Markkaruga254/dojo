@@ -25,6 +25,10 @@ python scripts/forge.py problem "<name>" --topic <t> --difficulty <d> --mode <in
 - solutions/: your solutions; a worked example is included
 - tracker.csv: written by the tracker
 
+## Free supporting resources
+
+Use the [free-first resource guide](../docs/RESOURCE_GUIDE.md#dsa-and-interview-problem-solving) when a pattern is unclear. Prefer [VisuAlgo](https://visualgo.net/en) for visual intuition and [CP-Algorithms](https://cp-algorithms.com/) for deeper reading; then close the tabs and solve the current problem independently. The local problem list and checkpoints still decide what to practise.
+
 ## Rules
 
 - Do not memorise solutions: learn patterns and why they work.

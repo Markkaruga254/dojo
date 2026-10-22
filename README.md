@@ -10,7 +10,7 @@ A 16-week, practice-first engineering programme combining Python and DSA intervi
 ![Tracks](https://img.shields.io/badge/tracks-5-0f766e)
 [![CI](https://github.com/Markkaruga254/dojo/actions/workflows/ci.yml/badge.svg)](https://github.com/Markkaruga254/dojo/actions/workflows/ci.yml)
 
-[🚀 Start here](#start-here) · [🧭 Course map](#course-map) · [📚 Curriculum](#curriculum) · [🗺️ Roadmap](ROADMAP.md) · [🧪 Assessments](assessments/) · [📈 Evidence tracker](CONFIDENCE-MATRIX.md)
+[🚀 Start here](#start-here) · [🧭 Course map](#course-map) · [📚 Curriculum](#curriculum) · [🆓 Free-first resources](docs/RESOURCE_GUIDE.md) · [🗺️ Roadmap](ROADMAP.md) · [🧪 Assessments](assessments/) · [📈 Evidence tracker](CONFIDENCE-MATRIX.md)
 
 </div>
 
@@ -85,6 +85,8 @@ flowchart TD
 ```
 
 ### Jump into a track
+
+Need an explanation, reference, or extra practice for the task you are on? Use the [free-first resource guide](docs/RESOURCE_GUIDE.md), which maps resources to course weeks, local labs, and evidence checkpoints. It is designed to help you return to the scheduled work—not create a second syllabus.
 
 | Open this | Start with | What to produce |
 |---|---|---|
