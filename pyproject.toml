@@ -1,0 +1,17 @@
+[project]
+name = "forge-90"
+version = "0.1.0"
+description = "A 16-week daily practice system: DSA, applied Python, ML, platform build, cloud/DevOps."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+labs = ["numpy>=1.26", "fastapi>=0.110", "httpx>=0.27"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "dsa/solutions"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["python/labs", "ml/labs"]  # starter code intentionally incomplete
