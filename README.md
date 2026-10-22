@@ -31,24 +31,20 @@ The current plan runs **26 October 2026 – 14 February 2027**. It is ambitious;
 
 You need Python 3.10 or newer, Git, and a terminal. CI uses Python 3.12.
 
-```bash
-git clone https://github.com/Markkaruga254/dojo.git
-cd dojo
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
-```
+    git clone https://github.com/Markkaruga254/dojo.git
+    cd dojo
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install --upgrade pip
+    python -m pip install -e ".[dev]"
 
-On Windows, activate with `.venv\\Scripts\\activate`. This installs the importable NSE platform package in editable mode and the tools used by the core checks. Install optional lab dependencies only when needed with `python -m pip install -e ".[labs]"`. The repository contains intentionally incomplete teaching labs; installing dependencies does not mean every lab is complete or expected to pass.
+On Windows, activate with .venv\Scripts\activate. This installs the importable NSE platform package in editable mode and the tools used by the core checks. Install optional lab dependencies only when needed with python -m pip install -e ".[labs]". The repository contains intentionally incomplete teaching labs; installing dependencies does not mean every lab is complete or expected to pass.
 
 ### 2. Verify the core workflow
 
-```bash
-python -m ruff check scripts tests dsa/solutions
-python -m pytest -q
-python -m pytest -q nse_platform/tests
-```
+    python -m ruff check scripts tests dsa/solutions
+    python -m pytest -q
+    python -m pytest -q nse_platform/tests
 
 The editable install makes the NSE package importable for the platform tests. If a command fails, inspect the error and the relevant module instructions instead of skipping it.
 
@@ -57,7 +53,7 @@ The editable install makes the NSE package importable for the platform tests. If
 1. Read [ROADMAP.md](ROADMAP.md) and record your baseline.
 2. Read [docs/PRINCIPLES.md](docs/PRINCIPLES.md) and [docs/DAILY_PROTOCOL.md](docs/DAILY_PROTOCOL.md).
 3. Review [docs/TOOLS_SETUP.md](docs/TOOLS_SETUP.md) and [docs/HF_SYLLABUS_CHECK.md](docs/HF_SYLLABUS_CHECK.md).
-4. Run `make day` to create today's log and `make week` to see the current focus.
+4. Run make day to create today's log and make week to see the current focus.
 5. Start with the first unfinished module in your scheduled track.
 
 ## Curriculum
@@ -68,24 +64,13 @@ The editable install makes the NSE package importable for the platform tests. If
 | Applied Python | [python/](python/) · [checkpoints](python/CHECKPOINTS.md) | Test-backed practical Python labs |
 | Machine learning | [ml/](ml/) · [checkpoints](ml/CHECKPOINTS.md) | Hugging Face study path plus tokenization and attention labs |
 | NSE market-insights platform | [nse_platform/](nse_platform/) | Incremental product work, ingestion, evaluation, project evidence |
-| Cloud and DevOps | [cloud/](cloud/) · [checkpoints](cloud/CHECKPOINTS.md) | Cloud engineering, delivery, infrastructure, security |
+| Cloud and DevOps | [cloud/](cloud/) · [checkpoints](cloud/CHECKPOINTS.md) | [Four local labs](cloud/README.md#lab-sequence): Linux/Git, Docker, CI, and Terraform lifecycle before billable cloud work |
 | Assessments | [assessments/](assessments/) | Interview banks, mock schedules, rubrics, timed practice playbook |
 | Daily learning record | [log/](log/) | Daily notes, effort, outcomes, review |
 
 ### Learning loop
 
-```mermaid
-flowchart TD
-    A[Read weekly goal] --> B[Study source lesson]
-    B --> C[Attempt without copying]
-    C --> D[Run tests or check result]
-    D --> E[Explain in your own words]
-    E --> F[Log evidence and gaps]
-    F --> G{Can you do it independently?}
-    G -- Not yet --> H[Review, get a hint, retry]
-    H --> C
-    G -- Yes --> I[Schedule a spaced re-solve]
-```
+    Read weekly goal → study source lesson → attempt without copying → run tests or check result → explain in your own words → log evidence and gaps → schedule a spaced re-solve
 
 For ML, use **Hugging Face material → concept notes → small implementation → experiment/tests → reflection**. The selected chapter-to-lab plan is documented in [docs/HF_SYLLABUS_CHECK.md](docs/HF_SYLLABUS_CHECK.md). Verify current official unit availability and record your own completion evidence; a mapped unit is not automatically a completed unit.
 
@@ -97,7 +82,7 @@ For ML, use **Hugging Face material → concept notes → small implementation �
 4. **Review gaps.** Put missed DSA problems and unclear concepts into a retry queue.
 5. **Close the day.** Complete the log, choose tomorrow's three priorities, and stop at the planned time.
 
-See [the daily protocol](docs/DAILY_PROTOCOL.md). The tracker commands are `make day`, `make week`, and `make stats`.
+See [the daily protocol](docs/DAILY_PROTOCOL.md). The tracker commands are make day, make week, and make stats.
 
 ## Prove progress
 
@@ -118,7 +103,7 @@ A green test suite only proves the tests that ran. It does not mean every course
 - The Hugging Face selected-unit map needs to be maintained against official source material; some external units may be unreleased or change.
 - Optional labs may require extra dependencies. Install only what the selected lab documents.
 - The NSE project is educational, not investment advice or a promise of accurate forecasts. Respect data-provider terms and document freshness, provenance, and model limitations.
-- Cloud labs can incur charges. Check pricing, clean up resources, and never commit credentials or state files.
+- Cloud labs can incur charges. Complete the local foundation labs first, check pricing, clean up resources, and never commit credentials or state files.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [the lesson template](docs/LESSON_TEMPLATE.md), and [the course audit](docs/COURSE_AUDIT.md) for contribution standards and improvement areas.
 
