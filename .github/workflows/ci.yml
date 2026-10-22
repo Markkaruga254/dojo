@@ -34,5 +34,3 @@ jobs:
 
       - name: Run NSE platform tests
         run: python -m pytest -q nse_platform/tests
-        env:
-          PYTHONPATH: nse_platform/src
