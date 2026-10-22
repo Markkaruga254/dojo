@@ -47,10 +47,10 @@ On Windows, activate with `.venv\\Scripts\\activate`. This installs the importab
 ```bash
 python -m ruff check scripts tests dsa/solutions
 python -m pytest -q
-PYTHONPATH=nse_platform/src python -m pytest -q nse_platform/tests
+python -m pytest -q nse_platform/tests
 ```
 
-The final command sets the source path for the NSE tests. If a command fails, inspect the error and the relevant module instructions instead of skipping it.
+The editable install makes the NSE package importable for the platform tests. If a command fails, inspect the error and the relevant module instructions instead of skipping it.
 
 ### 3. Start learning
 
