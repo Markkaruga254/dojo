@@ -33,52 +33,45 @@ If free or ss is unavailable, note that and use an equivalent tool. Do not kill 
 
 **Evidence:** record the command, one observation, and what you would investigate next. Sanitise usernames, hostnames, IP addresses, and process details before sharing output publicly.
 
-## Task 2 — Build a repeatable workspace
+## Task 2 — Create an isolated Git workspace
 
-From the repository root:
+Use a dedicated directory in your home folder so you do not change the course repository or a shared project:
 
-    mkdir -p .local-lab/linux-git
-    cd .local-lab/linux-git
+    mkdir -p "$HOME/dojo-linux-git-lab"
+    cd "$HOME/dojo-linux-git-lab"
     printf 'dojo linux-git lab\n' > README.txt
-    printf 'status=ok\n' > app.env.example
-    git init
+    printf 'status=ok\n' > .env.example
+    git init -b main
     git status --short
 
-Inspect the untracked files. Add a project-level ignore rule for local lab artifacts and real environment files before committing. If the repository already has a .gitignore, inspect and edit it rather than blindly appending duplicate rules. Keep the example file tracked and never place real credentials in either file.
+Create a .gitignore file that excludes real environment files but allows the safe example file:
 
-    cd "$(git rev-parse --show-toplevel)"
-    git status --short
+    printf '.env\n.env.*\n!.env.example\n' > .gitignore
     git check-ignore -v .env
+    git status --short
 
-Confirm that .env is ignored and that no real environment file or credential is staged.
+Expected: .env is ignored; .env.example is not ignored. Never place real credentials in either file. If your Git version does not support git init -b, run git init and then git branch -M main.
 
 ## Task 3 — Practise a safe Git change
 
-Use a dedicated local branch if working in an existing clone. Do not commit directly to a shared branch.
+Create a dedicated branch, add a note, and inspect the diff before committing:
 
     git switch -c lab/linux-git-notes
+    printf '\nCommands and observations are recorded in my lab notes.\n' >> README.txt
     git status --short
     git diff --check
-    git diff -- .gitignore
-
-Create a short note under .local-lab/linux-git/ containing the commands you ran, one observation from the system inspection, one follow-up diagnostic command, and any platform differences.
-
-Review before staging:
-
-    git status --short
-    git diff --check
-    git diff -- .gitignore
+    git diff
 
 Stage only the intended files, review the staged diff, and commit locally:
 
-    git add .gitignore .local-lab/linux-git/
+    git add .gitignore .env.example README.txt
     git diff --cached --check
     git diff --cached
     git commit -m "docs: record Linux and Git lab observations"
     git status --short
     git log -1 --oneline
 
-Do not push raw system output publicly unless it has been reviewed and sanitised. A local commit is sufficient evidence for this lab.
+Expected: the commit succeeds and git status reports a clean working tree. Do not create or commit a real .env file. Do not push raw system output publicly unless it has been reviewed and sanitised. A local commit is sufficient evidence for this lab.
 
 ## Task 4 — Verify a local service (optional)
 
