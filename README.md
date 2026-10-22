@@ -64,11 +64,11 @@ The final command sets the source path for the NSE tests. If a command fails, in
 
 | Track | Location | Practice and evidence |
 |---|---|---|
-| DSA and interview problem solving | [dsa/](dsa/) | Patterns, attempts, reference solutions, spaced re-solves |
-| Applied Python | [python/](python/) | Test-backed practical Python labs |
-| Machine learning | [ml/](ml/) | Hugging Face study path plus tokenization and attention labs |
+| DSA and interview problem solving | [dsa/](dsa/) · [checkpoints](dsa/CHECKPOINTS.md) | Patterns, attempts, reference solutions, spaced re-solves |
+| Applied Python | [python/](python/) · [checkpoints](python/CHECKPOINTS.md) | Test-backed practical Python labs |
+| Machine learning | [ml/](ml/) · [checkpoints](ml/CHECKPOINTS.md) | Hugging Face study path plus tokenization and attention labs |
 | NSE market-insights platform | [nse_platform/](nse_platform/) | Incremental product work, ingestion, evaluation, project evidence |
-| Cloud and DevOps | [cloud/](cloud/) | Cloud engineering, delivery, infrastructure, security |
+| Cloud and DevOps | [cloud/](cloud/) · [checkpoints](cloud/CHECKPOINTS.md) | Cloud engineering, delivery, infrastructure, security |
 | Assessments | [assessments/](assessments/) | Interview banks, mock schedules, rubrics, timed practice playbook |
 | Daily learning record | [log/](log/) | Daily notes, effort, outcomes, review |
 
@@ -87,7 +87,7 @@ flowchart TD
     G -- Yes --> I[Schedule a spaced re-solve]
 ```
 
-For ML, use **Hugging Face material → concept notes → small implementation → experiment/tests → reflection**. The chapter-to-lab map is still being checked in [docs/HF_SYLLABUS_CHECK.md](docs/HF_SYLLABUS_CHECK.md); do not treat an unmapped chapter as completed.
+For ML, use **Hugging Face material → concept notes → small implementation → experiment/tests → reflection**. The selected chapter-to-lab plan is documented in [docs/HF_SYLLABUS_CHECK.md](docs/HF_SYLLABUS_CHECK.md). Verify current official unit availability and record your own completion evidence; a mapped unit is not automatically a completed unit.
 
 ## Daily system
 
@@ -115,7 +115,7 @@ A green test suite only proves the tests that ran. It does not mean every course
 
 - CI checks completed Python modules and the core/NSE test suites. It does not treat unfinished ML starter exercises as completed implementations.
 - Tokenizer and attention labs contain learning TODOs; completing them is part of the curriculum.
-- The Hugging Face chapter map needs to be maintained against official source material.
+- The Hugging Face selected-unit map needs to be maintained against official source material; some external units may be unreleased or change.
 - Optional labs may require extra dependencies. Install only what the selected lab documents.
 - The NSE project is educational, not investment advice or a promise of accurate forecasts. Respect data-provider terms and document freshness, provenance, and model limitations.
 - Cloud labs can incur charges. Check pricing, clean up resources, and never commit credentials or state files.
